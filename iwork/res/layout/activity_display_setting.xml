@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/aboutBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ff6bbcf4"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_normal_bg" >
+
+        <include layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/about_titlebar_titleName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/interface_display"
+            android:textColor="@color/white"
+            android:textSize="22.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/about_Linear"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titleLayout"
+        android:background="@color/main_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/chat_bg_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/more_item_selector"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/more_font"
+                android:text="@string/chat_bg" />
+
+            <ImageView
+                android:id="@+id/chat_bg"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10.0dip"
+                android:background="#f2f0eb"
+                android:scaleType="fitCenter" />
+
+            <ImageView
+                style="@style/more_triangle"
+                android:background="@drawable/ic_arrow_right" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginLeft="10.0dip"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:id="@+id/font_size_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/more_item_selector"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/more_font"
+                android:text="@string/font_size" />
+
+            <ImageView
+                style="@style/more_triangle"
+                android:background="@drawable/ic_arrow_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/btn_talkOnline"
+        android:title="发消息"/>
+    <item
+        android:id="@+id/btn_call"
+        android:title="打电话"/>
+    <item
+        android:id="@+id/btn_sms"
+        android:title="发短信"/>
+    <item
+        android:id="@+id/btn_viewDetail"
+        android:title="查看详细资料"/>
+
+</menu>

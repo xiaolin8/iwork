@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:background="@color/top_bar_normal_bg" >
+
+        <include
+            android:layout_width="match_parent"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/clean_trace"
+            android:textColor="@color/white"
+            android:textSize="22.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:background="@drawable/feedback_content_edittext_shape"
+        android:orientation="vertical"
+        android:padding="@dimen/divider_height" >
+
+        <LinearLayout
+            android:id="@+id/cleanTrace_clean_trace_thirty_days_before"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/more_item_selector"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/more_font"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/clean_trace_thirty_days_before" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_marginLeft="10.0dip"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:id="@+id/cleanTrace_clean_all_trace"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/more_item_selector"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/more_font"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/clean_all_trace" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="5.0dip"
+        android:text="@string/clean_hint"
+        android:textColor="#ff939393"
+        android:textSize="14.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25.0dip"
+        android:background="@drawable/feedback_content_edittext_shape"
+        android:orientation="vertical"
+        android:padding="@dimen/divider_height" >
+
+        <LinearLayout
+            android:id="@+id/cleanTrace_clean_perfile"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:background="@drawable/more_item_selector"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/more_font"
+                android:text="@string/clean_personal_file" />
+
+            <ImageView
+                style="@style/more_triangle"
+                android:background="@drawable/ic_arrow_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/clean_trace_hint2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="5.0dip"
+        android:text="@string/clean_hint2"
+        android:textColor="#ff939393"
+        android:textSize="14.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25.0dip"
+        android:background="@drawable/feedback_content_edittext_shape"
+        android:orientation="vertical"
+        android:padding="@dimen/divider_height" >
+
+        <LinearLayout
+            android:id="@+id/cleanTrace_clean_setting"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/more_item_selector"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/more_font"
+                android:text="@string/clean_setting" />
+
+            <ImageView
+                style="@style/more_triangle"
+                android:background="@drawable/ic_arrow_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

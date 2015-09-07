@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_normal_bg" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/kaoqin_daka"
+            android:textColor="@color/white"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mm_title_act_btn"
+            android:onClick="SignIn"
+            android:text="提交"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/more_menu_Linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_background"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/feedback_content_edittext_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/divider_height" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/wq_kaoqin_locinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="提示：多刷新几次位置更准确,打开GPS或WiFi定位更精确!"
+                        android:textColor="#ffffb241"
+                        android:textSize="14.0sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_switch_vibrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/btn_bottom_selector"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:id="@+id/wq_kaoqin_addr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:drawableLeft="@drawable/dingwei_icon"
+                        android:gravity="center_vertical"
+                        android:minHeight="50.0dip"
+                        android:minWidth="160.0dip"
+                        android:paddingLeft="0.0dip"
+                        android:text="  点击获取位置   >  "
+                        android:textColor="#ff777777"
+                        android:textSize="14.0sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_switch_open_vibrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_arrow_right"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/feedback_content_edittext_shape"
+                android:orientation="vertical"
+                android:padding="@dimen/divider_height" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.0dip"
+                    android:background="#ffffffff"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/wq_kaoqin_photo_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="15.0dip"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:paddingTop="10.0dip"
+                            android:text="现场照片"
+                            android:textColor="#ff444444"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:paddingTop="10.0dip" >
+
+                        <RelativeLayout
+                            android:id="@+id/imgLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dip" >
+
+                            <ImageView
+                                android:id="@+id/img1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3.0dip"
+                                android:gravity="left"
+                                android:src="@drawable/cm_custview_camera_add" >
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/img2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3.0dip"
+                                android:layout_toRightOf="@id/img1"
+                                android:src="@drawable/cm_custview_camera_add" >
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/img3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3.0dip"
+                                android:layout_toRightOf="@id/img2"
+                                android:src="@drawable/cm_custview_camera_add" >
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/img4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/img1"
+                                android:layout_margin="3.0dip"
+                                android:layout_toLeftOf="@id/img1"
+                                android:src="@drawable/cm_custview_camera_add" >
+                            </ImageView>
+
+                            <ImageView
+                                android:id="@+id/img5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/img2"
+                                android:layout_margin="3.0dip"
+                                android:layout_toLeftOf="@id/img3"
+                                android:src="@drawable/cm_custview_camera_add" >
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="3.0dip"
+                                android:singleLine="true"
+                                android:text="已选择0张，还可选择5张"
+                                android:textColor="#BBBBBB" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider_color" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.0dip"
+                    android:background="#ffffffff"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.0"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/wq_kaoqin_photo_n"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="15.0dip"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:paddingTop="10.0dip"
+                            android:text="签到说明"
+                            android:textColor="#ff444444"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical" >
+
+                        <EditText
+                            android:id="@+id/wq_kaoqin_photo_note"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10.0dip"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="left"
+                            android:hint="在此输入签到说明"
+                            android:lines="6"
+                            android:textColor="#ff999999"
+                            android:textSize="14.0sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@color/divider_color" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

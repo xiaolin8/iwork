@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffededf3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/top_bar_normal_bg" >
+
+        <include layout="@layout/commom_back_btn" />
+
+        <TextView
+            android:id="@+id/about_titlebar_titleName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/gesture_code"
+            android:textColor="@color/white"
+            android:textSize="22.0sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="20.0dip"
+        android:gravity="left"
+        android:text="@string/gesture_code_title_text"
+        android:textColor="@android:color/black"
+        android:textSize="18.0sp" />
+
+    <ImageView
+        android:layout_width="260.0dip"
+        android:layout_height="265.0dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/create_gesture_code_explain" />
+
+    <Button
+        android:id="@+id/gestureCodeCreateBtn"
+        android:layout_width="260.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20.0dip"
+        android:onClick="createGesture"
+        android:background="@drawable/gesturecode_create_btn_selector"
+        android:text="@string/create_now"
+        android:textColor="@color/white"
+        android:textSize="20.0sp" />
+
+</LinearLayout>
