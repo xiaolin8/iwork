@@ -79,7 +79,7 @@ public class SplashActivity extends BaseActivity {
 				try {
 					url = new URL(MyApplication.getInstance().getString(
 							R.string.server_url)
-							+ "/user/GetUsers");
+							+ "/user/GetAllUsers");
 					HttpURLConnection conn = (HttpURLConnection) url
 							.openConnection();
 					conn.setRequestMethod("GET");

@@ -198,7 +198,7 @@ public class MeetingManageActivity extends FragmentActivity {
 				try {
 					url = new URL(MyApplication.getInstance().getString(
 							R.string.server_url)
-							+ "/MeetingRoom/GetRoomListJson");
+							+ "/MeetingRoom/GetMeetingRooms");
 					HttpURLConnection conn = (HttpURLConnection) url
 							.openConnection();
 					conn.setRequestMethod("GET");

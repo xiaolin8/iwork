@@ -122,7 +122,8 @@ public class GestureUnlockActivity extends BaseActivity {
 				return;
 			}
 			progressShow = true;
-			final ProgressDialog pd = new ProgressDialog(GestureUnlockActivity.this);
+			final ProgressDialog pd = new ProgressDialog(
+					GestureUnlockActivity.this);
 			pd.setCanceledOnTouchOutside(false);
 			pd.setOnCancelListener(new OnCancelListener() {
 				@Override
@@ -145,8 +146,8 @@ public class GestureUnlockActivity extends BaseActivity {
 								// 登陆成功，保存用户名密码
 								MyApplication.getInstance()
 										.setUserName(strname);
-								MyApplication.getInstance()
-										.setPassword("hashPwd");
+								MyApplication.getInstance().setPassword(
+										"hashPwd");
 								// 实例化SharedPreferences.Editor对象（第二步）
 								Editor editor = mySharedPreferences.edit();
 								// 用putString的方法保存数据
@@ -176,7 +177,8 @@ public class GestureUnlockActivity extends BaseActivity {
 										// 加载数据库中的uers表到userlist中
 										// 存入db
 										UserDao dao = new UserDao(
-												GestureUnlockActivity.this.getApplicationContext());
+												GestureUnlockActivity.this
+														.getApplicationContext());
 										userlist = dao.getContactList();
 										// 存入内存
 										MyApplication.getInstance()
@@ -190,9 +192,12 @@ public class GestureUnlockActivity extends BaseActivity {
 											user.setUsername(username);
 											String nickName = "";
 											// 获取这个username对应的nickName
-											URL url = new URL(MyApplication.getInstance()
-													.getString(R.string.server_url)+
-													"/user/getNickById?userName="
+											URL url = new URL(
+													MyApplication
+															.getInstance()
+															.getString(
+																	R.string.server_url)
+															+ "/user/getNickById?UserId="
 															+ username);
 											HttpURLConnection conn = (HttpURLConnection) url
 													.openConnection();
@@ -249,15 +254,17 @@ public class GestureUnlockActivity extends BaseActivity {
 												.setContactList(userlist);
 										// 存入db
 										UserDao dao = new UserDao(
-												GestureUnlockActivity.this.getApplicationContext());
+												GestureUnlockActivity.this
+														.getApplicationContext());
 										List<User> users = new ArrayList<User>(
-                                                userlist.values());
+												userlist.values());
 										dao.saveContactList(users);
 									}
 									// 获取群聊列表(群聊里只有groupid和groupname等简单信息，不包含members),sdk会把群组存入到内存和db中
 									EMGroupManager.getInstance()
 											.getGroupsFromServer();
-									if (!GestureUnlockActivity.this.isFinishing())
+									if (!GestureUnlockActivity.this
+											.isFinishing())
 										pd.dismiss();
 									// 进入主页面
 									startActivity(new Intent(
@@ -296,7 +303,8 @@ public class GestureUnlockActivity extends BaseActivity {
 			} else {
 				// 如果采用离线登录方式，那么。。。
 				// 进入主页面
-				startActivity(new Intent(GestureUnlockActivity.this, MainActivity.class));
+				startActivity(new Intent(GestureUnlockActivity.this,
+						MainActivity.class));
 				finish();
 			}
 		}

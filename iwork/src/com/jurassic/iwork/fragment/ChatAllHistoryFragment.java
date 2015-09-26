@@ -108,7 +108,7 @@ public class ChatAllHistoryFragment extends Fragment {
 							try {
 								url = new URL(MyApplication.getInstance()
 										.getString(R.string.server_url)
-										+ "/user/getNickById?userName="
+										+ "/user/getNickById?UserId="
 										+ username);
 								HttpURLConnection conn = (HttpURLConnection) url
 										.openConnection();
