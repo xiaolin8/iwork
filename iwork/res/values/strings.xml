@@ -90,7 +90,7 @@
     <string name="plus_scan">扫一扫</string>
     <string name="plus_take_photo">拍照分享</string>
     <string name="feed_circle">同事圈</string>
-    <string name="server_url">http://192.168.191.1</string>
+    <string name="server_url">http://192.168.137.1/api</string>
     <string name="department">部门</string>
     <string name="mobile">手机</string>
     <string name="tel">电话</string>

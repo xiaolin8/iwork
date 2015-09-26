@@ -636,8 +636,8 @@ public class GroupDetailsActivity extends BaseActivity implements
 				}
 				if (StringUtil.isNotEmpty(user.getNick())) {
 					button.setText(user.getNick());
-				} else if (StringUtil.isNotEmpty(user.getUserName())) {
-					button.setText(user.getUserName());
+				} else if (StringUtil.isNotEmpty(user.getRealName())) {
+					button.setText(user.getRealName());
 				}
 				Integer headpic = user.getHeadPic();
 				int[] headIds = { R.drawable.head1, R.drawable.head2,

@@ -50,30 +50,28 @@ public class UserDao {
 			for (User user : contactList) {
 				ContentValues values = new ContentValues();
 				values.put(COLUMN_USER_ID, user.getUserId());
-				if (user.getUserName() != null)
-					values.put(COLUMN_USER_NAME, user.getUserName());
-				if (user.getEnglishName() != null)
-					values.put(COLUMN_ENGLISH_NAME, user.getEnglishName());
-				if (user.getDeptId() != null)
-					values.put(COLUMN_DEP_ID, user.getDeptId());
+				if (user.getAccount() != null)
+					values.put(COLUMN_USER_NAME, user.getAccount());
+				if (user.getAlias() != null)
+					values.put(COLUMN_ENGLISH_NAME, user.getAlias());
+				if (user.getDepartmentId() != null)
+					values.put(COLUMN_DEP_ID, user.getDepartmentId());
 				if (user.getGender() != null)
 					values.put(COLUMN_GENDER, user.getGender());
 				if (user.getSignature() != null)
 					values.put(COLUMN_SIGNATURE, user.getSignature());
 				if (user.getHeadPic() != null)
 					values.put(COLUMN_HEAD_PIC, user.getHeadPic());
-				if (user.getCellPhone() != null)
-					values.put(COLUMN_CELL_PHONE, user.getCellPhone());
+				if (user.getMobile() != null)
+					values.put(COLUMN_CELL_PHONE, user.getMobile());
 				if (user.getOfficePhone() != null)
 					values.put(COLUMN_OFFICE_PHONE, user.getOfficePhone());
 				if (user.getEmail() != null)
 					values.put(COLUMN_EMAIL, user.getEmail());
-				if (user.getPosition() != null)
-					values.put(COLUMN_POSITION, user.getPosition());
-				if (user.getDisplayIndex() != null)
-					values.put(COLUMN_DISPLAY_INDEX, user.getDisplayIndex());
-				if (user.getStatus() != null)
-					values.put(COLUMN_STATUS, user.getStatus());
+				if (user.getSortCode() != null)
+					values.put(COLUMN_POSITION, user.getSortCode());
+				if (user.getEnabled() != null)
+					values.put(COLUMN_STATUS, user.getEnabled());
 				db.replace(TABLE_NAME, null, values);
 			}
 		}
@@ -120,18 +118,15 @@ public class UserDao {
 				User user = new User();
 				user.setUsername(userid);
 				user.setUserId(userid);
-				user.setUserName(username);
+				user.setRealName(username);
 				user.setNick(username);
-				user.setEnglishName(EnglishName);
-				user.setDeptId(DeptId);
+				user.setAlias(EnglishName);
+				user.setDepartmentId(DeptId);
 				user.setHeadPic(HeadPic);
 				user.setGender((Gender == 1));
 				user.setSignature(Signature);
-				user.setCellPhone(CellPhone);
+				user.setMobile(CellPhone);
 				user.setOfficePhone(OfficePhone);
-				user.setPosition(Position);
-				user.setDisplayIndex(DisplayIndex);
-				user.setStatus(Status);
 				String headerName = user.getUsername();
 				if (userid.equals(Constant.NEW_FRIENDS_USERNAME)
 						|| userid.equals(Constant.GROUP_USERNAME)) {
@@ -170,8 +165,8 @@ public class UserDao {
 		SQLiteDatabase db = dbHelper.getWritableDatabase();
 		ContentValues values = new ContentValues();
 		values.put(COLUMN_USER_ID, user.getUserId());
-		if (user.getUserName() != null)
-			values.put(COLUMN_USER_NAME, user.getUserName());
+		if (user.getRealName() != null)
+			values.put(COLUMN_USER_NAME, user.getRealName());
 		if (db.isOpen()) {
 			db.replace(TABLE_NAME, null, values);
 		}
@@ -216,18 +211,15 @@ public class UserDao {
 				User user = new User();
 				user.setUsername(userid);
 				user.setUserId(userid);
-				user.setUserName(username);
+				user.setRealName(username);
 				user.setNick(username);
-				user.setEnglishName(EnglishName);
-				user.setDeptId(DeptId);
+				user.setAlias(EnglishName);
+				user.setDepartmentId(DeptId);
 				user.setHeadPic(HeadPic);
 				user.setGender((Gender == 1));
 				user.setSignature(Signature);
-				user.setCellPhone(CellPhone);
+				user.setMobile(CellPhone);
 				user.setOfficePhone(OfficePhone);
-				user.setPosition(Position);
-				user.setDisplayIndex(DisplayIndex);
-				user.setStatus(Status);
 				String headerName = user.getUsername();
 				if (userid.equals(Constant.NEW_FRIENDS_USERNAME)
 						|| userid.equals(Constant.GROUP_USERNAME)) {

@@ -7,19 +7,19 @@ public class User extends EMContact {
 	private String header;
 
 	private String UserId;
-	private String UserName;
-	private String EnglishName;
-	private String DeptId;
+	private String Account;
+	private String RealName;
+	private String Alias;
+	private String DepartmentId;
 	private Integer HeadPic;
 	private Integer Gender;
 	private String Signature;
 	private String OfficePhone;
 	private String Email;
-	private String CellPhone;
-	private String Position;
-	private Integer DisplayIndex;
-	private String Comment;
-	private Integer Status;
+	private String Mobile;
+	private Integer SortCode;
+	private String Description;
+	private Integer Enabled;
 
 	public String getHeader() {
 		return header;
@@ -63,20 +63,28 @@ public class User extends EMContact {
 		this.UserId = UserId;
 	}
 
-	public String getUserName() {
-		return UserName;
+	public String getAccount() {
+		return Account;
 	}
 
-	public void setUserName(String UserName) {
-		this.UserName = UserName;
+	public void setAccount(String Account) {
+		this.Account = Account;
 	}
 
-	public String getEnglishName() {
-		return EnglishName;
+	public String getRealName() {
+		return RealName;
 	}
 
-	public void setEnglishName(String EnglishName) {
-		this.EnglishName = EnglishName;
+	public void setRealName(String RealName) {
+		this.RealName = RealName;
+	}
+
+	public String getAlias() {
+		return Alias;
+	}
+
+	public void setAlias(String Alias) {
+		this.Alias = Alias;
 	}
 
 	public String getSignature() {
@@ -103,12 +111,12 @@ public class User extends EMContact {
 		this.Gender = (Gender == true ? 1 : 0);
 	}
 
-	public String getDeptId() {
-		return DeptId;
+	public String getDepartmentId() {
+		return DepartmentId;
 	}
 
-	public void setDeptId(String DeptId) {
-		this.DeptId = DeptId;
+	public void setDepartmentId(String DepartmentId) {
+		this.DepartmentId = DepartmentId;
 	}
 
 	public String getOfficePhone() {
@@ -127,43 +135,35 @@ public class User extends EMContact {
 		this.Email = Email;
 	}
 
-	public String getCellPhone() {
-		return CellPhone;
+	public String getMobile() {
+		return Mobile;
 	}
 
-	public void setCellPhone(String CellPhone) {
-		this.CellPhone = CellPhone;
+	public void setMobile(String Mobile) {
+		this.Mobile = Mobile;
 	}
 
-	public String getPosition() {
-		return Position;
+	public Integer getSortCode() {
+		return SortCode;
 	}
 
-	public void setPosition(String Position) {
-		this.Position = Position;
+	public void setSortCode(Integer SortCode) {
+		this.SortCode = SortCode;
 	}
 
-	public Integer getDisplayIndex() {
-		return DisplayIndex;
+	public String getDescription() {
+		return Description;
 	}
 
-	public void setDisplayIndex(Integer DisplayIndex) {
-		this.DisplayIndex = DisplayIndex;
+	public void setDescription(String Description) {
+		this.Description = Description;
 	}
 
-	public String getComment() {
-		return Comment;
+	public Integer getEnabled() {
+		return Enabled;
 	}
 
-	public void setComment(String Comment) {
-		this.Comment = Comment;
-	}
-
-	public Integer getStatus() {
-		return Status;
-	}
-
-	public void setStatus(Integer Status) {
-		this.Status = Status;
+	public void setEnabled(Integer Enabled) {
+		this.Enabled = Enabled;
 	}
 }

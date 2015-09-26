@@ -113,16 +113,15 @@ public class UserDetailsActivity extends Activity {
 				if (entry.getKey().equals(Username))
 					user = entry.getValue();
 			}
-			String UserName = user.getUserName();
-			String EnglishName = user.getEnglishName();
-			String DeptId = user.getDeptId();
+			String UserName = user.getRealName();
+			String EnglishName = user.getAlias();
+			String DeptId = user.getDepartmentId();
 			Integer headpic = user.getHeadPic();
 			Integer Gender = user.getGender();
 			String Signature = user.getSignature();
 			String OfficePhone = user.getOfficePhone();
 			String Email = user.getEmail();
-			String CellPhone = user.getCellPhone();
-			String Position = user.getPosition();
+			String CellPhone = user.getMobile();
 			int[] headIds = { R.drawable.head1, R.drawable.head2,
 					R.drawable.head3, R.drawable.head4, R.drawable.head5,
 					R.drawable.head6, R.drawable.head7, R.drawable.head8,
@@ -166,8 +165,6 @@ public class UserDetailsActivity extends Activity {
 				per_info_mobile.setText(CellPhone);
 			if (StringUtil.isNotEmpty(OfficePhone))
 				per_info_office.setText(OfficePhone);
-			if (StringUtil.isNotEmpty(Position))
-				per_info_position.setText(Position);
 			if (StringUtil.isNotEmpty(Signature))
 				per_info_mark.setText(Signature);
 			else

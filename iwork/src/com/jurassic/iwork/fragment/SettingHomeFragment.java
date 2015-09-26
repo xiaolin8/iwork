@@ -117,10 +117,10 @@ public class SettingHomeFragment extends Fragment implements OnClickListener {
 						+ ".png");
 				my_profile_logo.setImageBitmap(headimg);
 			}
-			username = user.getUserName();
-			englishname = user.getEnglishName();
+			username = user.getRealName();
+			englishname = user.getAlias();
 			signature = user.getSignature();
-			cellphone = user.getCellPhone();
+			cellphone = user.getMobile();
 			officephone = user.getOfficePhone();
 			email = user.getEmail();
 			if (!TextUtils

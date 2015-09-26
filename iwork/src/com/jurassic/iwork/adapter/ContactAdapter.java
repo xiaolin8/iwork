@@ -67,8 +67,8 @@ public class ContactAdapter extends ArrayAdapter<User> implements
 		// 设置nick，这里不涉及到完整user，用username代替nick显示
 		String username = user.getUserId();
 		String nickname;
-		if (user.getUserName() != null)
-			nickname = user.getUserName();
+		if (user.getRealName() != null)
+			nickname = user.getRealName();
 		else
 			nickname = user.getNick();
 		String header = user.getHeader();

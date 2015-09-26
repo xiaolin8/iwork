@@ -16,12 +16,9 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.text.TextUtils;
 import android.view.animation.AlphaAnimation;
 
 import com.alibaba.fastjson.JSON;
-import com.easemob.util.HanziToPinyin;
-import com.jurassic.applib.controller.HXSDKHelper;
 import com.jurassic.iwork.Constant;
 import com.jurassic.iwork.MyApplication;
 import com.jurassic.iwork.R;
@@ -79,7 +76,7 @@ public class SplashActivity extends BaseActivity {
 				try {
 					url = new URL(MyApplication.getInstance().getString(
 							R.string.server_url)
-							+ "/user/GetAllUsers");
+							+ "/user/GetUsers");
 					HttpURLConnection conn = (HttpURLConnection) url
 							.openConnection();
 					conn.setRequestMethod("GET");
@@ -122,15 +119,15 @@ public class SplashActivity extends BaseActivity {
 					List<User> users = JSON.parseArray(result, User.class);
 					Map<String, User> userlist = new HashMap<String, User>();
 					for (User user : users) {
-						setUserHearder(user.getUserId(), user);
-						user.setNick(user.getUserName());
-						user.setUsername(user.getUserId());
-						userlist.put(user.getUserId(), user);
+						setUserHearder(user.getAccount(), user);
+						user.setNick(user.getRealName());
+						user.setUsername(user.getAccount());
+						userlist.put(user.getAccount(), user);
 					}
 					// 添加user"申请与通知"
 					User newFriends = new User();
 					newFriends.setUserId(Constant.NEW_FRIENDS_USERNAME);
-					newFriends.setUserName("申请与通知");
+					newFriends.setRealName("申请与通知");
 					newFriends.setUsername(Constant.NEW_FRIENDS_USERNAME);
 					newFriends.setNick("申请与通知");
 					newFriends.setHeader("");
@@ -139,7 +136,7 @@ public class SplashActivity extends BaseActivity {
 					// 添加"讨论组"
 					User groupUser = new User();
 					groupUser.setUserId(Constant.GROUP_USERNAME);
-					groupUser.setUserName("联系组");
+					groupUser.setRealName("联系组");
 					groupUser.setUsername(Constant.GROUP_USERNAME);
 					groupUser.setNick("联系组");
 					groupUser.setHeader("");

@@ -88,7 +88,7 @@ public class ContactsFragment extends Fragment {
 					// 直接进入聊天页面
 					startActivity(new Intent(getActivity(), ChatActivity.class)
 							.putExtra("nickName",
-									adapter.getItem(position).getUserName())
+									adapter.getItem(position).getRealName())
 							.putExtra("userId", userid));
 				}
 			}

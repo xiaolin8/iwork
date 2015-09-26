@@ -148,8 +148,8 @@ public class ChatAllHistoryAdapter extends ArrayAdapter<EMConversation> {
 				holder.name.setText("群聊");
 			} else if (username.equals(Constant.NEW_FRIENDS_USERNAME)) {
 				holder.name.setText("申请与通知");
-			} else if (user.getUserName() != null) {
-				holder.name.setText(user.getUserName());
+			} else if (user.getRealName() != null) {
+				holder.name.setText(user.getRealName());
 			} else {
 				holder.name.setText(username);
 			}
